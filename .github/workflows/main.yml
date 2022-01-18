@@ -1,0 +1,21 @@
+name: Convert and typeset example document
+on:
+  push:
+jobs:
+  typeset:
+    name: "Convert and typeset"
+    runs-on: ubuntu-latest
+    container:
+      image: witiko/markdown:latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: latexmk -shell-escape -pdf example.tex
+      - uses: marvinpinto/action-automatic-releases@latest
+        with:
+          title: The latest converted example document
+          automatic_release_tag: latest
+          prerelease: true
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          files: |
+            example.pandoc.tex
+            example.pdf
