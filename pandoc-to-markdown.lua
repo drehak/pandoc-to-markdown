@@ -17,7 +17,7 @@ function Space()
 end
 
 function Blocksep()
-  return "\\pandocBlocksep{}"
+  return "\\pandocBlocksep\n"
 end
 
 function Emph(s)
