@@ -55,7 +55,11 @@ function Emph(s)
 end
 
 -- TODO Underline
--- TODO Strong
+
+function Strong(s)
+  return "\\pandocStrong{" .. s .. "}"
+end
+
 -- TODO Strikeout
 -- TODO Superscript
 -- TODO Subscript
