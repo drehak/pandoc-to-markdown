@@ -2,6 +2,19 @@
 \def\pandocDocumentBegin{\markdownRendererDocumentBegin}
 \def\pandocDocumentEnd{\markdownRendererDocumentEnd}
 \def\pandocBlocksep{\markdownRendererInterblockSeparator}
+
+% Block elements
+\def\pandocStrong{\markdownRendererStrongEmphasis}
+\def\pandocHeaderOne{\markdownRendererHeadingOne}
+\def\pandocHeaderTwo{\markdownRendererHeadingTwo}
+\def\pandocHeaderThree{\markdownRendererHeadingThree}
+\def\pandocHeaderFour{\markdownRendererHeadingFour}
+\def\pandocHeaderFive{\markdownRendererHeadingFive}
+\def\pandocHeaderSix{\markdownRendererHeadingSix}
+
+% Inline elements
 \def\pandocEmph{\markdownRendererEmphasis}
 \def\pandocStrong{\markdownRendererStrongEmphasis}
+\def\pandocSingleQuoted#1{`#1'}
+\def\pandocDoubleQuoted#1{``#1''}
 \def\pandocSpace{ }
