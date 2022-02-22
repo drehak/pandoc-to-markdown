@@ -1,17 +1,17 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{pandoc-to-markdown}[2021/01/18 package pandoc-to-markdown]
+\ProvidesPackage{pandoc-to-markdown}[2021/02/22 package pandoc-to-markdown]
 
+% Pandoc to Markdown mapping
 \RequirePackage{markdown}
 \input"pandoc-to-markdown.tex"
-
-% Key-value definitions
-\RequirePackage{keyval}
 
 %% Inline elements
 \RequirePackage[normalem]{ulem}
 \renewcommand\pandocStrikeout[1]{\sout{#1}}
 \renewcommand\pandocUnderline[1]{\uline{#1}}
 
+% Key-value definitions
+\RequirePackage{keyval}
 \def\pandocFormat{markdown}
 \define@key{pandoc-to-markdown}{format}{%
   \def\pandocFormat{#1}%
