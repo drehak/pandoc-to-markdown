@@ -21,5 +21,6 @@
 \newcommand\pandocInput[2][]{%
   \setkeys{pandoc-to-markdown}{#1}%
   \immediate\write18{pandoc -f \pandocFormat\space-i "#2" -t pandoc-to-markdown.lua -o "\jobname.pandoc.tex"}%
+  \immediate\write18{pandoc -f \pandocFormat\space-i "#2" -t native -o "\jobname.pandoc.hs"}%
   \input"\jobname.pandoc.tex"%
 }

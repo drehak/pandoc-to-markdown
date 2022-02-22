@@ -18,4 +18,5 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           files: |
             example.pandoc.tex
+            example.pandoc.hs
             example.pdf
