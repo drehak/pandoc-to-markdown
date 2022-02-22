@@ -34,7 +34,11 @@ end
 -- TODO LineBlock
 -- TODO CodeBlock
 -- TODO RawBlock
--- TODO BlockQuote
+
+function BlockQuote(s)
+  return s  -- TODO
+end
+
 -- TODO OrderedList
 -- TODO BulletList
 -- TODO DefinitionList
@@ -77,7 +81,10 @@ function Strong(s)
   return "\\pandocStrong{" .. s .. "}"
 end
 
--- TODO Strikeout
+function Strikeout(s)
+  return "\\pandocStrikeout{" .. s .. "}"
+end
+
 -- TODO Superscript
 -- TODO Subscript
 -- TODO SmallCaps

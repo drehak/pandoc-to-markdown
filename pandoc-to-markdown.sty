@@ -7,6 +7,10 @@
 % Key-value definitions
 \RequirePackage{keyval}
 
+%% Inline elements
+\RequirePackage[normalem]{ulem}
+\renewcommand\pandocStrikeout[1]{\sout{#1}}
+
 \def\pandocFormat{markdown}
 \define@key{pandoc-to-markdown}{format}{%
   \def\pandocFormat{#1}%
