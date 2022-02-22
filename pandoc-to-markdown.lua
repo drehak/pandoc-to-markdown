@@ -75,7 +75,9 @@ function Emph(s)
   return "\\pandocEmph{" .. s .. "}"
 end
 
--- TODO Underline
+function Underline(s)
+  return "\\pandocUnderline{" .. s .. "}"
+end
 
 function Strong(s)
   return "\\pandocStrong{" .. s .. "}"

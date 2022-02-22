@@ -21,3 +21,5 @@ One day the panda woke up and found an enormous red dragon at its doorstep. The 
 'Ah, pardon me, my friend. I thought you were a Marxist, but everyone knows Marxists cannot strike out text.'
 
 "Indeed, but I am a **ginseng-flavored** Marxist!"
+
+'Oh Heavens!' cried out the panda, slipped [under]{.underline} the dragon and ran out to the store, as it was out of converting tools today.
