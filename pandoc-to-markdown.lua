@@ -90,8 +90,14 @@ function Strikeout(s)
   return "\\pandocStrikeout{" .. s .. "}"
 end
 
--- TODO Superscript
--- TODO Subscript
+function Subscript(s)
+  return "\\pandocSubscript{" .. s .. "}"
+end
+
+function Superscript(s)
+  return "\\pandocSuperscript{" .. s .. "}"
+end
+
 -- TODO SmallCaps
 
 function SingleQuoted(s)

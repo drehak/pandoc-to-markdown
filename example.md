@@ -25,3 +25,5 @@ One day the panda woke up and found an enormous red dragon at its doorstep. The 
 'Oh Heavens!' cried out the panda, slipped [under]{.underline} the dragon and ran out to the store, as it was out of converting tools today.
 
 ---
+
+Passing a ^crane\ drone^ above and a ~dugong\ submarine~ under a river bridge, the panda eventually reached the store.
