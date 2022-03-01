@@ -54,20 +54,7 @@ end
 -- TODO DefinitionList
 
 function Header(lev, s, attr)
-  -- TODO very suboptimal for the users, ideally turn it into a single macro with a level parameter
-  if (lev == 1) then
-    return "\\pandocHeaderOne{" .. s .. "}"
-  elseif (lev == 2) then
-    return "\\pandocHeaderTwo{" .. s .. "}"
-  elseif (lev == 3) then
-    return "\\pandocHeaderThree{" .. s .. "}"
-  elseif (lev == 4) then
-    return "\\pandocHeaderFour{" .. s .. "}"
-  elseif (lev == 5) then
-    return "\\pandocHeaderFive{" .. s .. "}"
-  elseif (lev == 6) then
-    return "\\pandocHeaderSix{" .. s .. "}"
-  end
+  return "\\pandocHeader{" .. lev .. "}{" .. s .. "}"
 end
 
 function HorizontalRule()

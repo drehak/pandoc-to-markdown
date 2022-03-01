@@ -8,12 +8,22 @@
 \def\pandocBulletListItemBegin{\markdownRendererUlItem}
 \def\pandocBulletListItemEnd{\markdownRendererUlItemEnd}
 \def\pandocBulletListEnd{\markdownRendererUlEnd}
-\def\pandocHeaderOne{\markdownRendererHeadingOne}
-\def\pandocHeaderTwo{\markdownRendererHeadingTwo}
-\def\pandocHeaderThree{\markdownRendererHeadingThree}
-\def\pandocHeaderFour{\markdownRendererHeadingFour}
-\def\pandocHeaderFive{\markdownRendererHeadingFive}
-\def\pandocHeaderSix{\markdownRendererHeadingSix}
+\def\pandocHeader#1#2{
+  \ifcase#1\relax
+  \or
+    \markdownRendererHeadingOne{#2}
+  \or
+    \markdownRendererHeadingTwo{#2}
+  \or
+    \markdownRendererHeadingThree{#2}
+  \or
+    \markdownRendererHeadingFour{#2}
+  \or
+    \markdownRendererHeadingFive{#2}
+  \or
+    \markdownRendererHeadingSix{#2}
+  \fi
+}
 \def\pandocHorizontalRule{\markdownRendererHorizontalRule}
 
 %% Inline elements
