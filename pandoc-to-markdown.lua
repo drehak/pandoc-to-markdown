@@ -60,7 +60,10 @@ function Header(lev, s, attr)
   end
 end
 
--- TODO HorizontalRule
+function HorizontalRule()
+  return "\\pandocHorizontalRule"
+end
+
 -- TODO Table
 -- TODO Div
 -- TODO Null
