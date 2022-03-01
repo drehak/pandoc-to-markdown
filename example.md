@@ -26,4 +26,11 @@ One day the panda woke up and found an enormous red dragon at its doorstep. The 
 
 ---
 
-Passing a ^crane\ drone^ above and a ~dugong\ submarine~ under a river bridge, the panda eventually reached the store.
+Passing a ^crane\ drone^ above and a ~dugong\ submarine~ under a river bridge, the panda eventually reached the store. Fumbling in its pockets, it took out a piece of paper and went after:
+
+- bamboo stalks
+- bamboo stems
+- bamboo shoots
+- shrimp crackers
+
+'Wait a second, this isn't the inventory of my converting tools! I took my ordinary shopping list instead!', realized the panda. 'Alas, this will have to do.'

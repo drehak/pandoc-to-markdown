@@ -25,7 +25,9 @@ end
 
 -- Block elements.
 
--- TODO Plain
+function Plain(s)
+  return s
+end
 
 function Para(s)
   return s
@@ -40,7 +42,15 @@ function BlockQuote(s)
 end
 
 -- TODO OrderedList
--- TODO BulletList
+
+function BulletList(items)
+  local buffer = {}
+  for _, item in pairs(items) do
+    table.insert(buffer, "\\pandocBulletListItemBegin\n" .. item .. "\n\\pandocBulletListItemEnd")
+  end
+  return "\\pandocBulletListBegin\n" .. table.concat(buffer, '\n') .. "\n\\pandocBulletListEnd"
+end
+
 -- TODO DefinitionList
 
 function Header(lev, s, attr)
