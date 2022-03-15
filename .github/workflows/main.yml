@@ -19,9 +19,9 @@ jobs:
           prerelease: true
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           files: |
-            example-markdown-panda.tex
+            example-markdown-panda.pandoc.tex
             example-markdown-panda.pdf
-            example-man-pandoc.tex
+            example-man-pandoc.pandoc.tex
             example-man-pandoc.pdf
-            example-man-leapp.tex
+            example-man-leapp.pandoc.tex
             example-man-leapp.pdf
