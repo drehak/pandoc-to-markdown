@@ -1,0 +1,12 @@
+\documentclass{article}
+\usepackage{pandoc-to-markdown}
+% turn off ligatures to ensure -- does not turn into \textendash
+\usepackage{fontspec}
+\defaultfontfeatures[\rmfamily,\sffamily]{}
+\setmainfont{Latin Modern Roman}
+% indent first paragraphs too
+\usepackage{indentfirst}
+
+\begin{document}
+\pandocInput[format=man]{files/leapp.1}
+\end{document}

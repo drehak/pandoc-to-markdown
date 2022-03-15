@@ -1,0 +1,14 @@
+\documentclass{article}
+\usepackage{pandoc-to-markdown}
+% turn off ligatures to ensure -- does not turn into \textendash
+\usepackage{fontspec}
+\defaultfontfeatures[\rmfamily,\sffamily]{}
+\setmainfont{Latin Modern Roman}
+% prevent overflows on long words in code blocks
+\emergencystretch=5em
+% do not indent paragraphs for better text flow
+\parindent=0pt
+
+\begin{document}
+\pandocInput[format=man]{files/pandoc.1}
+\end{document}

@@ -9,7 +9,9 @@ jobs:
       image: witiko/markdown:latest
     steps:
       - uses: actions/checkout@v2
-      - run: latexmk -shell-escape -pdf example.tex
+      - run: latexmk -shell-escape -lualatex example-markdown-panda.tex
+      - run: latexmk -shell-escape -lualatex example-man-pandoc.tex
+      - run: latexmk -shell-escape -lualatex example-man-leapp.tex
       - uses: marvinpinto/action-automatic-releases@latest
         with:
           title: The latest converted example document
@@ -17,5 +19,9 @@ jobs:
           prerelease: true
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           files: |
-            example.pandoc.tex
-            example.pdf
+            example-markdown-panda.tex
+            example-markdown-panda.pdf
+            example-man-pandoc.tex
+            example-man-pandoc.pdf
+            example-man-leapp.tex
+            example-man-leapp.pdf
