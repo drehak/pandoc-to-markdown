@@ -16,7 +16,26 @@ meta.__index =
 setmetatable(_G, meta)
 
 function escape(s)
-  return s  -- TODO: Add some proper escaping.
+  -- TODO handle all special characters, deduplicate code
+  s = string.gsub(s, "\\", "\\\\")
+  -- TODO avoid the dummy
+  s = string.gsub(s, "{", "!!DUMMY!!")
+  s = string.gsub(s, "}", "\\textbraceright{}")
+  s = string.gsub(s, "!!DUMMY!!", "\\textbraceleft{}")
+  s = string.gsub(s, "%[", "\\lbrack{}")
+  s = string.gsub(s, "]", "\\rbrack{}")
+  s = string.gsub(s, "%<", "\\textless{}")
+  s = string.gsub(s, "%>", "\\textgreater{}")
+  s = string.gsub(s, "%|", "\\textbar{}")
+  s = string.gsub(s, "_", "\\_")
+  s = string.gsub(s, "#", "\\#")
+  s = string.gsub(s, "&", "\\&")
+  s = string.gsub(s, "~", "\\~{}")
+  s = string.gsub(s, "`", "\\`{}")
+  s = string.gsub(s, "%^", "\\^{}")
+  s = string.gsub(s, "%%", "\\%%")
+  s = string.gsub(s, "%$", "\\$")
+  return s
 end
 
 function Blocksep()
@@ -106,7 +125,10 @@ function DoubleQuoted(s)
 end
 
 -- TODO Cite
--- TODO Code
+
+function Code(s, attr)  -- attributes are discarded - no support in Markdown
+  return "\\pandocCode{" .. escape(s) .. "}"
+end
 
 function Space()
   return "\\pandocSpace{}"
