@@ -10,10 +10,10 @@ for TeX. For more information, see [the article in the CSTUG Bulletin 31:1–4][
  [3]: https://www.cstug.cz/bulletin/pdf/2021-1-4.pdf#page=85
  [7]: https://translate.google.com/translate?sl=auto&tl=en&u=https://www.fi.muni.cz/~xnovot32/bulletin/2021-1-4/06-rehak-pandoc/&client=webapp
 
-To typeset the example document, execute the following command on a system with
+To typeset the example documents, execute the following command on a system with
 an up-to-date installation of TeX Live and Pandoc:
 
-    $ latexmk -shell-escape -pdf example.tex
+    $ make examples
 
 Alternatively, you can use [the witiko/markdown Docker image][4], which includes
 both TeX Live and Pandoc:
