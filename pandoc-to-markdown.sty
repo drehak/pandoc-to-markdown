@@ -17,9 +17,19 @@
   \def\pandocFormat{#1}%
 }
 
+% Directory for auxiliary files
+\def\pandocAuxDir{\jobname-aux}
+
 % Document command definitions
 \newcommand\pandocInput[2][]{%
   \setkeys{pandoc-to-markdown}{#1}%
-  \immediate\write18{pandoc -f \pandocFormat\space-i "#2" -t pandoc-to-markdown.lua -o "\jobname.pandoc.tex"}%
+  \directlua{local kpse = require("kpse")
+             kpse.set_program_name("luatex")
+             local lfs = require("lfs")
+             local auxDir = "\luaescapestring{\pandocAuxDir}"
+             if not lfs.isdir(auxDir) then
+               assert(lfs.mkdir(auxDir))
+             end}
+  \immediate\write18{pandoc -f \pandocFormat\space-i "#2" -M auxDir="\pandocAuxDir" -t pandoc-to-markdown.lua -o "\jobname.pandoc.tex"}%
   \input"\jobname.pandoc.tex"%
 }
