@@ -1,0 +1,10 @@
+# directories
+*-aux/
+
+# files
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.pandoc.tex
+*.pdf
