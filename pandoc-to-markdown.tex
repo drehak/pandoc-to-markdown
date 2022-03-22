@@ -4,6 +4,13 @@
 \def\pandocBlocksep{\markdownRendererInterblockSeparator}
 
 %% Block elements
+\def\pandocCodeBlock#1#2{
+  \ifx&#2&%
+    \markdownRendererInputVerbatim{#1}
+  \else
+    \markdownRendererInputFencedCode{#1}{#2}
+  \fi
+}
 \def\pandocBulletListBegin{\markdownRendererUlBegin}
 \def\pandocBulletListItemBegin{\markdownRendererUlItem}
 \def\pandocBulletListItemEnd{\markdownRendererUlItemEnd}

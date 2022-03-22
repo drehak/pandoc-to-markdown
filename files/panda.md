@@ -37,4 +37,22 @@ Passing a ^crane\ drone^ above and a ~dugong\ submarine~ under a river bridge, t
 
 And so the panda started hunting down items from the list. Since the shelves were `properly monospaced`, it only took a few minutes.
 
-`{}}{ []][ <>>< ~~~~ |__| #~~& $^^%` (**TODO** this will be a code block)
+```
+{~~}  []][  #<>#  $^^%
+}{}{  |__|  &><&  $^^%
+```
+
+Some of the shelves were very colorful and caught the panda's eye, but as it stared at them...
+
+```python
+function CodeBlock(s, attr)
+  local filename = meta.auxDir .. "/CodeBlock." .. codeBlocks
+  local file = assert(io.open(filename, "w"))
+  file:write(s)
+  file:close()
+  codeBlocks = codeBlocks + 1
+  return "\\pandocCodeBlock{" .. filename .. "}{" .. attr.class .. "}"
+end
+```
+
+...the shelves started staring back, which disoriented the panda a lot.

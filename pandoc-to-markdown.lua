@@ -4,10 +4,10 @@ function Doc(body, metadata, variables)
       .. "\\pandocDocumentEnd"
 end
 
+local meta = PANDOC_DOCUMENT.meta
 -- The following code will produce runtime warnings when you haven't defined
 -- all of the functions you need for the custom writer, so it's useful
 -- to include when you're working on a writer.
-local meta = {}
 meta.__index =
   function(_, key)
     io.stderr:write(string.format("WARNING: Undefined function '%s'\n",key))
@@ -53,7 +53,19 @@ function Para(s)
 end
 
 -- TODO LineBlock
--- TODO CodeBlock
+
+-- counter for filenames
+local codeBlocks = 1
+
+function CodeBlock(s, attr)  -- attributes are discarded - no support in Markdown
+  local filename = meta.auxDir .. "/CodeBlock." .. codeBlocks
+  local file = assert(io.open(filename, "w"))
+  file:write(s)
+  file:close()
+  codeBlocks = codeBlocks + 1
+  return "\\pandocCodeBlock{" .. filename .. "}{" .. attr.class .. "}"
+end
+
 -- TODO RawBlock
 
 function BlockQuote(s)
