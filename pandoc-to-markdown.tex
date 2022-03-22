@@ -1,46 +1,46 @@
 % Pandoc to Markdown mapping
-\def\pandocDocumentBegin{\markdownRendererDocumentBegin}
-\def\pandocDocumentEnd{\markdownRendererDocumentEnd}
-\def\pandocBlocksep{\markdownRendererInterblockSeparator}
+\def\pandocDocumentBegin{\markdownRendererDocumentBegin}%
+\def\pandocDocumentEnd{\markdownRendererDocumentEnd}%
+\def\pandocBlocksep{\markdownRendererInterblockSeparator}%
 
 %% Block elements
-\def\pandocCodeBlock#1#2{
-  \ifx&#2&%
-    \markdownRendererInputVerbatim{#1}
+\def\pandocCodeBlock#1#2{%
+  \ifx\relax#2\relax
+    \markdownRendererInputVerbatim{#1}%
   \else
-    \markdownRendererInputFencedCode{#1}{#2}
+    \markdownRendererInputFencedCode{#1}{#2}%
   \fi
 }
-\def\pandocBulletListBegin{\markdownRendererUlBegin}
-\def\pandocBulletListItemBegin{\markdownRendererUlItem}
-\def\pandocBulletListItemEnd{\markdownRendererUlItemEnd}
-\def\pandocBulletListEnd{\markdownRendererUlEnd}
-\def\pandocHeader#1#2{
+\def\pandocBulletListBegin{\markdownRendererUlBegin}%
+\def\pandocBulletListItemBegin{\markdownRendererUlItem}%
+\def\pandocBulletListItemEnd{\markdownRendererUlItemEnd}%
+\def\pandocBulletListEnd{\markdownRendererUlEnd}%
+\def\pandocHeader#1#2{%
   \ifcase#1\relax
   \or
-    \markdownRendererHeadingOne{#2}
+    \markdownRendererHeadingOne{#2}%
   \or
-    \markdownRendererHeadingTwo{#2}
+    \markdownRendererHeadingTwo{#2}%
   \or
-    \markdownRendererHeadingThree{#2}
+    \markdownRendererHeadingThree{#2}%
   \or
-    \markdownRendererHeadingFour{#2}
+    \markdownRendererHeadingFour{#2}%
   \or
-    \markdownRendererHeadingFive{#2}
+    \markdownRendererHeadingFive{#2}%
   \or
-    \markdownRendererHeadingSix{#2}
+    \markdownRendererHeadingSix{#2}%
   \fi
 }
-\def\pandocHorizontalRule{\markdownRendererHorizontalRule}
+\def\pandocHorizontalRule{\markdownRendererHorizontalRule}%
 
 %% Inline elements
-\def\pandocEmph{\markdownRendererEmphasis}
-\def\pandocUnderline#1{#1}
-\def\pandocStrong{\markdownRendererStrongEmphasis}
-\def\pandocStrikeout#1{#1}
-\def\pandocSubscript{\textsubscript}
-\def\pandocSuperscript{\textsuperscript}
-\def\pandocSingleQuoted#1{`#1'}
-\def\pandocDoubleQuoted#1{``#1''}
-\def\pandocCode{\markdownRendererCodeSpan}
-\def\pandocSpace{ }
+\def\pandocEmph{\markdownRendererEmphasis}%
+\def\pandocUnderline#1{#1}%
+\def\pandocStrong{\markdownRendererStrongEmphasis}%
+\def\pandocStrikeout#1{#1}%
+\def\pandocSubscript{\textsubscript}%
+\def\pandocSuperscript{\textsuperscript}%
+\def\pandocSingleQuoted#1{`#1'}%
+\def\pandocDoubleQuoted#1{``#1''}%
+\def\pandocCode{\markdownRendererCodeSpan}%
+\def\pandocSpace{ }%
