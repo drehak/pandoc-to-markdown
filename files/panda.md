@@ -44,7 +44,7 @@ And so the panda started hunting down items from the list. Since the shelves wer
 
 Some of the shelves were very colorful and caught the panda's eye, but as it stared at them...
 
-```python
+```lua
 function CodeBlock(s, attr)
   local filename = meta.auxDir .. "/CodeBlock." .. codeBlocks
   local file = assert(io.open(filename, "w"))
