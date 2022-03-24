@@ -4,33 +4,34 @@
 \def\pandocBlocksep{\markdownRendererInterblockSeparator}%
 
 %% Block elements
-\def\pandocCodeBlock#1#2{%
-  \ifx\relax#2\relax
-    \markdownRendererInputVerbatim{#1}%
-  \else
-    \markdownRendererInputFencedCode{#1}{#2}%
-  \fi
-}
+\ExplSyntaxOn
+\def\pandocCodeBlock#1#2
+  {
+    \tl_if_empty:nTF
+      { #2 }
+      { \markdownRendererInputVerbatim { #1 } }
+      { \markdownRendererInputFencedCode { #1 } { #2 } }
+  }
+\ExplSyntaxOff
 \def\pandocBulletListBegin{\markdownRendererUlBegin}%
 \def\pandocBulletListItemBegin{\markdownRendererUlItem}%
 \def\pandocBulletListItemEnd{\markdownRendererUlItemEnd}%
 \def\pandocBulletListEnd{\markdownRendererUlEnd}%
-\def\pandocHeader#1#2{%
-  \ifcase#1\relax
-  \or
-    \markdownRendererHeadingOne{#2}%
-  \or
-    \markdownRendererHeadingTwo{#2}%
-  \or
-    \markdownRendererHeadingThree{#2}%
-  \or
-    \markdownRendererHeadingFour{#2}%
-  \or
-    \markdownRendererHeadingFive{#2}%
-  \or
-    \markdownRendererHeadingSix{#2}%
-  \fi
-}
+\ExplSyntaxOn
+\def\pandocHeader#1#2
+  {
+    \int_case:nn
+      { #1 }
+      {
+        { 1 } { \markdownRendererHeadingOne { #2 } }
+        { 2 } { \markdownRendererHeadingTwo { #2 } }
+        { 3 } { \markdownRendererHeadingThree { #2 } }
+        { 4 } { \markdownRendererHeadingFour { #2 } }
+        { 5 } { \markdownRendererHeadingFive { #2 } }
+        { 6 } { \markdownRendererHeadingSix { #2 } }
+      }
+  }
+\ExplSyntaxOff
 \def\pandocHorizontalRule{\markdownRendererHorizontalRule}%
 
 %% Inline elements
