@@ -13,6 +13,7 @@ jobs:
       - run: latexmk -shell-escape -lualatex example-man-pandoc.tex
       - run: latexmk -shell-escape -lualatex example-man-leapp.tex
       - uses: marvinpinto/action-automatic-releases@latest
+        if: github.ref == 'refs/heads/main'
         with:
           title: The latest converted example document
           automatic_release_tag: latest

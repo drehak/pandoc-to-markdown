@@ -17,24 +17,23 @@ setmetatable(_G, meta)
 
 function escape(s)
   -- TODO handle all special characters, deduplicate code
-  s = string.gsub(s, "\\", "\\\\")
-  -- TODO avoid the dummy
-  s = string.gsub(s, "{", "!!DUMMY!!")
-  s = string.gsub(s, "}", "\\textbraceright{}")
-  s = string.gsub(s, "!!DUMMY!!", "\\textbraceleft{}")
-  s = string.gsub(s, "%[", "\\lbrack{}")
-  s = string.gsub(s, "]", "\\rbrack{}")
-  s = string.gsub(s, "%<", "\\textless{}")
-  s = string.gsub(s, "%>", "\\textgreater{}")
-  s = string.gsub(s, "%|", "\\textbar{}")
-  s = string.gsub(s, "_", "\\_")
-  s = string.gsub(s, "#", "\\#")
-  s = string.gsub(s, "&", "\\&")
-  s = string.gsub(s, "~", "\\~{}")
-  s = string.gsub(s, "`", "\\`{}")
-  s = string.gsub(s, "%^", "\\^{}")
-  s = string.gsub(s, "%%", "\\%%")
-  s = string.gsub(s, "%$", "\\$")
+  s = string.gsub(s, "[\\{}%|_#&~%^%%%$]", function(c)
+    local s
+    if     c == "\\" then s = "\\textbackslash{}"
+    elseif c == "{"  then s = "\\textbraceleft{}"
+    elseif c == "}"  then s = "\\textbraceright{}"
+    elseif c == "|"  then s = "\\textbar{}"
+    elseif c == "_"  then s = "\\textunderscore{}"
+    elseif c == "#"  then s = "\\#{}"
+    elseif c == "&"  then s = "\\&{}"
+    elseif c == "~"  then s = "\\textasciitilde{}"
+    elseif c == "^"  then s = "\\textasciicircum{}"
+    elseif c == "%"  then s = "\\%{}"
+    elseif c == "$"  then s = "\\${}"
+    else                  s = c
+    end
+    return s
+  end)
   return s
 end
 
