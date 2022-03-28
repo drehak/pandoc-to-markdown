@@ -12,6 +12,7 @@ jobs:
       - run: latexmk -shell-escape -lualatex example-markdown-panda.tex
       - run: latexmk -shell-escape -lualatex example-man-pandoc.tex
       - run: latexmk -shell-escape -lualatex example-man-leapp.tex
+      - run: latexmk -shell-escape -lualatex example-man-wolf.tex
       - uses: marvinpinto/action-automatic-releases@latest
         if: github.ref == 'refs/heads/main'
         with:
@@ -26,3 +27,5 @@ jobs:
             example-man-pandoc.pdf
             example-man-leapp.pandoc.tex
             example-man-leapp.pdf
+            example-man-wolf.pandoc.tex
+            example-man-wolf.pdf
