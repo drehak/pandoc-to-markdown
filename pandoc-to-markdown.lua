@@ -19,17 +19,17 @@ function escape(s)
   -- TODO handle all special characters, deduplicate code
   s = string.gsub(s, "[\\{}%|_#&~%^%%%$]", function(c)
     local s
-    if     c == "\\" then s = "\\textbackslash{}"
-    elseif c == "{"  then s = "\\textbraceleft{}"
-    elseif c == "}"  then s = "\\textbraceright{}"
-    elseif c == "|"  then s = "\\textbar{}"
-    elseif c == "_"  then s = "\\textunderscore{}"
-    elseif c == "#"  then s = "\\#{}"
-    elseif c == "&"  then s = "\\&{}"
-    elseif c == "~"  then s = "\\textasciitilde{}"
-    elseif c == "^"  then s = "\\textasciicircum{}"
-    elseif c == "%"  then s = "\\%{}"
-    elseif c == "$"  then s = "\\${}"
+    if     c == "&"  then s = "\\pandocRendererAmpersand{}"
+    elseif c == "\\" then s = "\\pandocRendererBackslash{}"
+    elseif c == "^"  then s = "\\pandocRendererCircumflex{}"
+    elseif c == "$"  then s = "\\pandocRendererDollarSign{}"
+    elseif c == "#"  then s = "\\pandocRendererHash{}"
+    elseif c == "{"  then s = "\\pandocRendererLeftBrace{}"
+    elseif c == "%"  then s = "\\pandocRendererPercentSign{}"
+    elseif c == "|"  then s = "\\pandocRendererPipe{}"
+    elseif c == "}"  then s = "\\pandocRendererRightBrace{}"
+    elseif c == "~"  then s = "\\pandocRendererTilde{}"
+    elseif c == "_"  then s = "\\pandocRendererUnderscore{}"
     else                  s = c
     end
     return s
