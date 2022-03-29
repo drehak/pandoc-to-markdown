@@ -10,6 +10,8 @@ examples:
 clean:
 	@echo "-- Cleaning temporary files"
 	@echo
+	@rm -frv *-aux
+	@rm -frv _minted-*
 	@rm -fv *.aux
 	@rm -fv *.fdb_latexmk
 	@rm -fv *.fls

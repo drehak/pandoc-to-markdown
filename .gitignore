@@ -1,5 +1,6 @@
 # directories
 *-aux/
+_minted-*/
 
 # files
 *.aux
