@@ -81,7 +81,19 @@ function BulletList(items)
   return "\\pandocBulletListBegin\n" .. table.concat(buffer, '\n') .. "\n\\pandocBulletListEnd"
 end
 
--- TODO DefinitionList
+function DefinitionList(items)
+  local buffer = {}
+  for _,item in pairs(items) do
+    local term, defs = next(item)
+    table.insert(buffer, "\\pandocDefinitionListItemBegin{" .. term .. "}")
+    for _,def in pairs(defs) do
+        table.insert(buffer, "\\pandocDefinitionListDefinitionBegin\n" .. def ..
+                       "\n\\pandocDefinitionListDefinitionEnd{}")
+    end
+    table.insert(buffer, "\\pandocDefinitionListItemEnd{}")
+  end
+  return "\\pandocDefinitionListBegin\n" .. table.concat(buffer) .. "\n\\pandocDefinitionListEnd{}"
+end
 
 function Header(lev, s, attr)
   return "\\pandocHeader{" .. lev .. "}{" .. s .. "}"

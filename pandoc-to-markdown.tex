@@ -17,6 +17,12 @@
 \def\pandocBulletListItemBegin{\markdownRendererUlItem}%
 \def\pandocBulletListItemEnd{\markdownRendererUlItemEnd}%
 \def\pandocBulletListEnd{\markdownRendererUlEnd}%
+\def\pandocDefinitionListBegin{\markdownRendererDlBegin}%
+\def\pandocDefinitionListItemBegin#1{\markdownRendererDlItem{#1}}%
+\def\pandocDefinitionListDefinitionBegin{\markdownRendererDlDefinitionBegin}%
+\def\pandocDefinitionListDefinitionEnd{\markdownRendererDlDefinitionEnd}%
+\def\pandocDefinitionListItemEnd{\markdownRendererDlItemEnd}%
+\def\pandocDefinitionListEnd{\markdownRendererDlEnd}%
 \ExplSyntaxOn
 \def\pandocHeader#1#2
   {
