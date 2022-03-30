@@ -1,6 +1,15 @@
 \documentclass{article}
 \usepackage{pandoc-to-markdown}
 
+\usepackage{emoji}
+\markdownSetup{
+    renderers = {
+        headingOne = {%
+            \section*{\emoji{wolf} #1}%
+        },
+    },
+}
+
 \begin{document}
 \pandocInput[format=man]{files/wolf.1}
 \end{document}
