@@ -56,3 +56,5 @@ end
 ```
 
 ...the shelves started staring back, which disoriented the panda a lot.
+
+Eventually the panda grabbed all the weap- uh, snacks it wanted and headed back home. The dragon was still standing at its doorstep, making our panda feel very [small]{.smallcaps}.

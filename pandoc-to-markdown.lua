@@ -16,7 +16,6 @@ meta.__index =
 setmetatable(_G, meta)
 
 function escape(s)
-  -- TODO handle all special characters, deduplicate code
   s = string.gsub(s, "[\\{}%|_#&~%^%%%$]", function(c)
     local s
     if     c == "&"  then s = "\\pandocRendererAmpersand{}"
@@ -137,7 +136,9 @@ function Superscript(s)
   return "\\pandocSuperscript{" .. s .. "}"
 end
 
--- TODO SmallCaps
+function SmallCaps(s)
+  return "\\pandocSmallCaps{" .. s .. "}"
+end
 
 function SingleQuoted(s)
   return "\\pandocSingleQuoted{" .. s .. "}"
