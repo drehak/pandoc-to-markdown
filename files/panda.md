@@ -33,7 +33,7 @@ Passing a ^crane\ drone^ above and a ~dugong\ submarine~ under a river bridge, t
 - bamboo shoots
 - shrimp crackers
 
-'Wait a second, this isn't the inventory of my converting tools! I took my ordinary shopping list instead!', realized the panda. 'Alas, this will have to do.'
+'Wait a second, this isn't the inventory of my converting tools! I took my ordinary shopping list instead! &\\^$#{%|}~\_!', sweared the panda. 'Alas, this will have to do.'
 
 And so the panda started hunting down items from the list. Since the shelves were `properly monospaced`, it only took a few minutes.
 
