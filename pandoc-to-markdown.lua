@@ -160,7 +160,15 @@ end
 
 -- TODO SoftBreak
 -- TODO LineBreak
--- TODO Math
+
+function InlineMath(s)
+  return "\\pandocInlineMath{" .. s .. "}"
+end
+
+function DisplayMath(s)
+  return "\\pandocDisplayMath{" .. s .. "}"
+end
+
 -- TODO RawInline
 -- TODO Link
 -- TODO Image
