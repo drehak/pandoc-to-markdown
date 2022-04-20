@@ -30,3 +30,9 @@ Here are the expected results:
 
  [5]: https://github.com/drehak/pandoc-to-markdown/releases/download/latest/example-man-pandoc.pandoc.tex
  [6]: https://github.com/drehak/pandoc-to-markdown/releases/download/latest/example-man-pandoc.pdf
+
+The development of this package has been funded by the research project
+[MUNI/33/1784/2020 (Extension of the input formats of the Markdown tool)][7]
+funded by the Faculty of Informatics, Masaryk University.
+
+ [7]: https://www.fi.muni.cz/app/projects?project=58488
