@@ -46,15 +46,15 @@
 \def\pandocUnderline#1{#1}%
 \def\pandocStrong{\markdownRendererStrongEmphasis}%
 \def\pandocStrikeout#1{#1}%
-\def\pandocSubscript{\textsubscript}%
-\def\pandocSuperscript{\textsuperscript}%
-\def\pandocSmallCaps{\textsc}%
+\def\pandocSubscript#1{#1}%
+\def\pandocSuperscript#1{#1}%
+\def\pandocSmallCaps#1{#1}%
 \def\pandocSingleQuoted#1{`#1'}%
 \def\pandocDoubleQuoted#1{``#1''}%
 \def\pandocCode{\markdownRendererCodeSpan}%
 \def\pandocSpace{ }%
 \def\pandocInlineMath#1{$#1$}%
-\def\pandocNote{\footnote}%
+\def\pandocNote#1{#1}%
 
 %% Special characters
 \def\pandocRendererAmpersand{\markdownRendererAmpersand}%

@@ -11,6 +11,10 @@
 \RequirePackage[normalem]{ulem}
 \renewcommand\pandocStrikeout[1]{\sout{#1}}
 \renewcommand\pandocUnderline[1]{\uline{#1}}
+\renewcommand\pandocSmallCaps{\textsc}
+\renewcommand\pandocSubscript{\textsubscript}
+\renewcommand\pandocSuperscript{\textsuperscript}
+\renewcommand\pandocNote{\footnote}
 
 \def\pandocFormat{markdown}
 \define@key{pandoc-to-markdown}{format}{%
