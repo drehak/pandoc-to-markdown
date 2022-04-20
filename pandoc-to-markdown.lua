@@ -172,5 +172,9 @@ end
 -- TODO RawInline
 -- TODO Link
 -- TODO Image
--- TODO Note
+
+function Note(s)
+  return "\\pandocNote{" .. s .. "}"
+end
+
 -- TODO Span

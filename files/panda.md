@@ -63,13 +63,15 @@ Without missing a beat, the dragon snatched the packet of stalks as if it were a
 
 The panda was stupefied. "Weren't you going to, uh, eat me?"
 
-"What? You? Nah, I'm vegan. Anyway, we're nationalizing your house. It's too big and you're driving down our country's GINI coefficient."
+"What? You? Nah, I'm vegan. Anyway, we're nationalizing your house. It's too big and you're driving up our country's Gini coefficient[^gini]."
+
+[^gini]: The Gini coefficient measures the inequality among values of a frequency distribution, like levels of income. A Gini coefficient of 0 expresses perfect equality, where all values are the same (i.e. where everyone has the same income). A Gini coefficient of 1 (or 100%) expresses maximal inequality among values (i.e. for a large number of people where only one person has all the income or consumption and all others have none, the Gini coefficient will be nearly one).
 
 $$
 G = \frac{\displaystyle{\sum_{i=1}^n \sum_{j=1}^n \left| x_i - x_j \right|}}{\displaystyle{2 \sum_{i=1}^n \sum_{j=1}^n x_j}} = \frac{\displaystyle{\sum_{i=1}^n \sum_{j=1}^n \left| x_i - x_j \right|}}{\displaystyle{2n\sum_{j=1}^n x_j}} = \frac{\displaystyle{\sum_{i=1}^n \sum_{j=1}^n \left| x_i - x_j \right|}}{\displaystyle{2 n^2 \bar{x}}}
 $$
 
-"I mean," the panda opined, "can't you just bring it back up by lowering the $2 n^2 \bar{x}$ in the denominator?"
+"I mean," the panda opined, "can't you just bring it back down by increasing the $2 n^2 \bar{x}$ in the denominator?"
 
 "That's not how the math works. The sums in the numerator would increase as well."
 
