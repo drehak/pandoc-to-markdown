@@ -1,6 +1,7 @@
 examples:
 	@echo "-- Typesetting examples"
 	@echo
+	@latexmk -shell-escape -lualatex example-html-pandoc.tex
 	@latexmk -shell-escape -lualatex example-markdown-panda.tex
 	@latexmk -shell-escape -lualatex example-man-pandoc.tex
 	@latexmk -shell-escape -lualatex example-man-leapp.tex

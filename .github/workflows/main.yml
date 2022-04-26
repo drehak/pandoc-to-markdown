@@ -9,6 +9,7 @@ jobs:
       image: witiko/markdown:latest
     steps:
       - uses: actions/checkout@v2
+      - run: latexmk -shell-escape -lualatex example-html-pandoc.tex
       - run: latexmk -shell-escape -lualatex example-markdown-panda.tex
       - run: latexmk -shell-escape -lualatex example-man-pandoc.tex
       - run: latexmk -shell-escape -lualatex example-man-leapp.tex
@@ -21,6 +22,8 @@ jobs:
           prerelease: true
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           files: |
+            example-html-pandoc.pandoc.tex
+            example-html-pandoc.pdf
             example-markdown-panda.pandoc.tex
             example-markdown-panda.pdf
             example-man-pandoc.pandoc.tex
