@@ -167,7 +167,10 @@ function Space()
   return "\\pandocSpace{}"
 end
 
--- TODO SoftBreak
+function SoftBreak()
+  return "\\pandocSoftBreak{}"
+end
+
 -- TODO LineBreak
 
 function InlineMath(s)
