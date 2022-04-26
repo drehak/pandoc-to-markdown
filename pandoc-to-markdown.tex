@@ -13,6 +13,9 @@
       { \markdownRendererInputFencedCode { #1 } { #2 } }
   }
 \ExplSyntaxOff
+%%% Most block elements are broken into two "Begin" and "End" parts to avoid
+%%% running out of memory during macro expansion, since their contents can be
+%%% very large, especially in the case of Divs.
 \def\pandocBulletListBegin{\markdownRendererUlBegin}%
 \def\pandocBulletListItemBegin{\markdownRendererUlItem}%
 \def\pandocBulletListItemEnd{\markdownRendererUlItemEnd}%
@@ -39,6 +42,8 @@
   }
 \ExplSyntaxOff
 \def\pandocHorizontalRule{\markdownRendererHorizontalRule}%
+\def\pandocDiv#1{}% TODO consider if this shouldn't be an environment
+\def\pandocDivEnd{}%
 \def\pandocDisplayMath#1{\[#1\]}%
 
 %% Inline elements
@@ -55,6 +60,7 @@
 \def\pandocSpace{ }%
 \def\pandocInlineMath#1{$#1$}%
 \def\pandocNote#1{#1}%
+\def\pandocSpan#1#2{#1}%
 
 %% Special characters
 \def\pandocRendererAmpersand{\markdownRendererAmpersand}%

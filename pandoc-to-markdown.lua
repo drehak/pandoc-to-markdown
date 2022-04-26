@@ -15,7 +15,7 @@ meta.__index =
   end
 setmetatable(_G, meta)
 
-function escape(s)
+local function escape(s)
   s = string.gsub(s, "[\\{}%|_#&~%^%%%$]", function(c)
     local s
     if     c == "&"  then s = "\\pandocRendererAmpersand{}"
@@ -34,6 +34,11 @@ function escape(s)
     return s
   end)
   return s
+end
+
+local function attributes(attr)
+  -- TODO figure out how to parse
+  return "heh"
 end
 
 function Blocksep()
@@ -103,7 +108,11 @@ function HorizontalRule()
 end
 
 -- TODO Table
--- TODO Div
+
+function Div(s, attr)
+  return "\\pandocDiv{" .. attributes(attr) .. "} \n" .. s .. "\n\\pandocDivEnd{}"
+end
+
 -- TODO Null
 
 -- Inline elements.
@@ -177,4 +186,6 @@ function Note(s)
   return "\\pandocNote{" .. s .. "}"
 end
 
--- TODO Span
+function Span(s, attr)
+  return "\\pandocSpan{" .. attributes(attr) .. "}{" .. s .. "}"
+end
