@@ -11,14 +11,16 @@ jobs:
     container:
       image: witiko/markdown:latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
       - run: latexmk -shell-escape -lualatex example-html-browsers.tex
       - run: latexmk -shell-escape -lualatex example-html-pandoc.tex
       - run: latexmk -shell-escape -lualatex example-markdown-panda.tex
       - run: latexmk -shell-escape -lualatex example-man-pandoc.tex
       - run: latexmk -shell-escape -lualatex example-man-leapp.tex
       - run: latexmk -shell-escape -lualatex example-man-wolf.tex
-      - uses: marvinpinto/action-automatic-releases@latest
+      - name: Upload artifacts
+        uses: marvinpinto/action-automatic-releases@latest
         if: github.ref == 'refs/heads/main'
         with:
           title: The latest converted example document
@@ -38,12 +40,6 @@ jobs:
             example-man-leapp.pdf
             example-man-wolf.pandoc.tex
             example-man-wolf.pdf
-  markdownlint:
-    name: Check Markdown
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
       - name: Check URLs
         uses: paramt/url-checker@master
         with:
