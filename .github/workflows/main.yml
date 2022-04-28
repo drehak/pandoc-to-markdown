@@ -3,7 +3,7 @@ on:
   push:
 jobs:
   typeset:
-    name: "Convert and typeset"
+    name: Convert and typeset
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -47,4 +47,5 @@ jobs:
       - name: Check URLs
         uses: paramt/url-checker@master
         with:
-          files: "README.md,examples/README.md"
+          files: README.md,examples/README.md
+          blacklist: panda.md
