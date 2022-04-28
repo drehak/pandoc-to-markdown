@@ -10,20 +10,21 @@ for TeX. For more information, see [the article in the CSTUG Bulletin 31:1–4][
  [3]: https://www.cstug.cz/bulletin/pdf/2021-1-4.pdf#page=85
  [4]: https://translate.google.com/translate?sl=auto&tl=en&u=https://www.fi.muni.cz/~xnovot32/bulletin/2021-1-4/06-rehak-pandoc/&client=webapp
 
-To typeset the example documents, execute the following command on a system with
+To typeset the example documents, execute the following commands on a system with
 an up-to-date installation of TeX Live and Pandoc:
 
+    $ cd examples
     $ make examples
 
 Alternatively, you can use [the witiko/markdown Docker image][5], which includes
 both TeX Live and Pandoc:
 
     $ docker run --rm -it -v "$PWD":/workdir -w /workdir witiko/markdown \
-    > latexmk -shell-escape -pdf example-man-pandoc.tex
+    > latexmk -shell-escape -pdf examples/example-man-pandoc.tex
 
  [5]: https://hub.docker.com/r/witiko/markdown/tags
 
-See `files/` for the example documents.
+See `examples/` for the example documents.
 
 The development of this package has been funded by the research project
 [MUNI/33/1784/2020 (Extension of the input formats of the Markdown tool)][6]
