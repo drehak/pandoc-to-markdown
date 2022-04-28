@@ -28,18 +28,18 @@ jobs:
           prerelease: true
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           files: |
-            example-html-browsers.pandoc.tex
-            example-html-browsers.pdf
-            example-html-pandoc.pandoc.tex
-            example-html-pandoc.pdf
-            example-markdown-panda.pandoc.tex
-            example-markdown-panda.pdf
-            example-man-pandoc.pandoc.tex
-            example-man-pandoc.pdf
-            example-man-leapp.pandoc.tex
-            example-man-leapp.pdf
-            example-man-wolf.pandoc.tex
-            example-man-wolf.pdf
+            examples/example-html-browsers.pandoc.tex
+            examples/example-html-browsers.pdf
+            examples/example-html-pandoc.pandoc.tex
+            examples/example-html-pandoc.pdf
+            examples/example-markdown-panda.pandoc.tex
+            examples/example-markdown-panda.pdf
+            examples/example-man-pandoc.pandoc.tex
+            examples/example-man-pandoc.pdf
+            examples/example-man-leapp.pandoc.tex
+            examples/example-man-leapp.pdf
+            examples/example-man-wolf.pandoc.tex
+            examples/example-man-wolf.pdf
       - name: Check URLs
         uses: paramt/url-checker@master
         with:
