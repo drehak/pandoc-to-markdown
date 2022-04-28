@@ -110,7 +110,7 @@ end
 -- TODO Table
 
 function Div(s, attr)
-  return "\\pandocDiv{" .. attributes(attr) .. "} \n" .. s .. "\n\\pandocDivEnd{}"
+  return "\\pandocDivBegin{" .. attributes(attr) .. "}%\n" .. s .. "\n\\pandocDivEnd{}"
 end
 
 -- TODO Null
