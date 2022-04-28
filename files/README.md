@@ -14,12 +14,20 @@
 
 - `browsers.html` - (incomplete) *Every Web Browser Absolutely Sucks.* by Luke Smith.
     - [raw file][browsers.html-raw], [TeX input][browsers.html-input], [TeX output][browsers.html-output], [PDF output][browsers.html-pdf], [source][browsers.html-source]
+- `pandoc.html` - (incomplete) Hackage documentation of Pandoc's AST elements. Lots of divs and tables.
+    - [raw file][pandoc.html-raw], [TeX input][pandoc.html-input], [TeX output][pandoc.html-output], [PDF output][pandoc.html-pdf], [source][pandoc.html-source]
 
  [browsers.html-source]: https://lukesmith.xyz/articles/every-web-browser-absolutely-sucks
  [browsers.html-raw]: browsers.html?plain=1
  [browsers.html-input]: ../example-html-browsers.tex
  [browsers.html-output]: https://github.com/drehak/pandoc-to-markdown/releases/download/latest/example-html-browsers.pandoc.tex
  [browsers.html-pdf]: https://github.com/drehak/pandoc-to-markdown/releases/download/latest/example-html-browsers.pdf
+
+ [pandoc.html-source]: https://hackage.haskell.org/package/pandoc-types-1.22/docs/Text-Pandoc-Definition.html
+ [pandoc.html-raw]: pandoc.html?plain=1
+ [pandoc.html-input]: ../example-html-pandoc.tex
+ [pandoc.html-output]: https://github.com/drehak/pandoc-to-markdown/releases/download/latest/example-html-pandoc.pandoc.tex
+ [pandoc.html-pdf]: https://github.com/drehak/pandoc-to-markdown/releases/download/latest/example-html-pandoc.pdf
 
 ### Manual pages
 
