@@ -171,7 +171,10 @@ function SoftBreak()
   return "\\pandocSoftBreak{}"
 end
 
--- TODO LineBreak
+function LineBreak()
+  return "\\pandocLineBreak{}"
+end
+
 
 function InlineMath(s)
   return "\\pandocInlineMath{" .. s .. "}"
