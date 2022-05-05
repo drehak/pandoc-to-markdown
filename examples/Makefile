@@ -1,12 +1,12 @@
 examples:
 	@echo "-- Typesetting examples"
 	@echo
-	@latexmk -shell-escape -lualatex example-html-browsers.tex
-	@latexmk -shell-escape -lualatex example-html-pandoc.tex
-	@latexmk -shell-escape -lualatex example-markdown-panda.tex
-	@latexmk -shell-escape -lualatex example-man-pandoc.tex
-	@latexmk -shell-escape -lualatex example-man-leapp.tex
-	@latexmk -shell-escape -lualatex example-man-wolf.tex
+	@latexmk -shell-escape -lualatex html-browsers.tex
+	@latexmk -shell-escape -lualatex html-pandoc.tex
+	@latexmk -shell-escape -lualatex markdown-panda.tex
+	@latexmk -shell-escape -lualatex man-pandoc.tex
+	@latexmk -shell-escape -lualatex man-leapp.tex
+	@latexmk -shell-escape -lualatex man-wolf.tex
 	@echo
 
 clean:

@@ -13,12 +13,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - run: latexmk -shell-escape -lualatex example-html-browsers.tex
-      - run: latexmk -shell-escape -lualatex example-html-pandoc.tex
-      - run: latexmk -shell-escape -lualatex example-markdown-panda.tex
-      - run: latexmk -shell-escape -lualatex example-man-pandoc.tex
-      - run: latexmk -shell-escape -lualatex example-man-leapp.tex
-      - run: latexmk -shell-escape -lualatex example-man-wolf.tex
+      - run: latexmk -shell-escape -lualatex html-browsers.tex
+      - run: latexmk -shell-escape -lualatex html-pandoc.tex
+      - run: latexmk -shell-escape -lualatex markdown-panda.tex
+      - run: latexmk -shell-escape -lualatex man-pandoc.tex
+      - run: latexmk -shell-escape -lualatex man-leapp.tex
+      - run: latexmk -shell-escape -lualatex man-wolf.tex
       - name: Upload artifacts
         uses: marvinpinto/action-automatic-releases@latest
         if: github.ref == 'refs/heads/main'
@@ -28,18 +28,18 @@ jobs:
           prerelease: true
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           files: |
-            examples/example-html-browsers.pandoc.tex
-            examples/example-html-browsers.pdf
-            examples/example-html-pandoc.pandoc.tex
-            examples/example-html-pandoc.pdf
-            examples/example-markdown-panda.pandoc.tex
-            examples/example-markdown-panda.pdf
-            examples/example-man-pandoc.pandoc.tex
-            examples/example-man-pandoc.pdf
-            examples/example-man-leapp.pandoc.tex
-            examples/example-man-leapp.pdf
-            examples/example-man-wolf.pandoc.tex
-            examples/example-man-wolf.pdf
+            examples/html-browsers.pandoc.tex
+            examples/html-browsers.pdf
+            examples/html-pandoc.pandoc.tex
+            examples/html-pandoc.pdf
+            examples/markdown-panda.pandoc.tex
+            examples/markdown-panda.pdf
+            examples/man-pandoc.pandoc.tex
+            examples/man-pandoc.pdf
+            examples/man-leapp.pandoc.tex
+            examples/man-leapp.pdf
+            examples/man-wolf.pandoc.tex
+            examples/man-wolf.pdf
       - name: Check URLs
         uses: paramt/url-checker@master
         with:
