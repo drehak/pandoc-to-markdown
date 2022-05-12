@@ -42,7 +42,7 @@
   }
 \ExplSyntaxOff
 \def\pandocHorizontalRule{\markdownRendererHorizontalRule}%
-\def\pandocDivBegin#1{}%
+\def\pandocDivBegin{}%
 \def\pandocDivEnd{}%
 \def\pandocDisplayMath#1{\[#1\]}%
 
@@ -62,7 +62,7 @@
 \def\pandocLineBreak{\hfil\break}%
 \def\pandocInlineMath#1{$#1$}%
 \def\pandocNote#1{#1}%
-\def\pandocSpan#1#2{#1}%
+\def\pandocSpan#1{#1}%
 
 %% Special characters
 \def\pandocRendererAmpersand{\markdownRendererAmpersand}%

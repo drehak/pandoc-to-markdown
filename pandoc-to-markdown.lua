@@ -109,8 +109,8 @@ end
 
 -- TODO Table
 
-function Div(s, attr)
-  return "\\pandocDivBegin{" .. attributes(attr) .. "}%\n" .. s .. "\n\\pandocDivEnd{}"
+function Div(s, attr)  -- attributes are discarded for now
+  return "\\pandocDivBegin\n" .. s .. "\n\\pandocDivEnd{}"
 end
 
 -- TODO Null
@@ -193,5 +193,5 @@ function Note(s)
 end
 
 function Span(s, attr)
-  return "\\pandocSpan{" .. attributes(attr) .. "}{" .. s .. "}"
+  return "\\pandocSpan{" .. s .. "}"
 end
