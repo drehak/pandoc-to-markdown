@@ -14,6 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - run: latexmk -shell-escape -lualatex html-browsers.tex
+      - run: latexmk -shell-escape -lualatex html-gdp.tex
       - run: latexmk -shell-escape -lualatex html-pandoc.tex
       - run: latexmk -shell-escape -lualatex markdown-panda.tex
       - run: latexmk -shell-escape -lualatex man-pandoc.tex
@@ -30,6 +31,8 @@ jobs:
           files: |
             examples/html-browsers.pandoc.tex
             examples/html-browsers.pdf
+            examples/html-gdp.pandoc.tex
+            examples/html-gdp.pdf
             examples/html-pandoc.pandoc.tex
             examples/html-pandoc.pdf
             examples/markdown-panda.pandoc.tex
