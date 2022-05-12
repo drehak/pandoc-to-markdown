@@ -194,6 +194,10 @@ function Image(s, src, tit, attr)
   return "\\pandocImage{" .. s .. "}{" .. escape(src) .. "}{" .. src .. "}{" .. escape(tit) .. "}"
 end
 
+function CaptionedImage(src, tit, s, attr)  -- s = caption
+  return "\\pandocCaptionedImage{" .. s .. "}{" .. escape(src) .. "}{" .. src .. "}{" .. escape(string.sub(tit, 5)) .. "}"
+end
+
 function Note(s)
   return "\\pandocNote{" .. s .. "}"
 end
