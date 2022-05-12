@@ -185,8 +185,14 @@ function DisplayMath(s)
 end
 
 -- TODO RawInline
--- TODO Link
--- TODO Image
+
+function Link(s, tgt, tit, attr)   -- attributes are discarded for now
+  return "\\pandocLink{" .. s .. "}{" .. escape(tgt) .. "}{" .. tgt .. "}{" .. escape(tit) .. "}"
+end
+
+function Image(s, src, tit, attr)
+  return "\\pandocImage{" .. s .. "}{" .. escape(src) .. "}{" .. src .. "}{" .. escape(tit) .. "}"
+end
 
 function Note(s)
   return "\\pandocNote{" .. s .. "}"
