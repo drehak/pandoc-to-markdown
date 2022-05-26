@@ -59,7 +59,18 @@ end
 
 ...the shelves started staring back, which disoriented the panda a lot.
 
-Eventually the panda grabbed all the weap- uh, snacks it wanted and headed back home. The dragon was still standing at its doorstep. The panda felt very [small]{.smallcaps} in comparison, but it gathered all its courage and with a loud "Take this!", threw the bamboo stalks at the dragon with full force.
+Eventually the panda grabbed all the weap- uh, snacks it wanted and headed back home.
+
+| The
+| dragon
+| was
+| still
+| standing
+| at
+| its
+| doorstep.
+
+The panda felt very [small]{.smallcaps} in comparison, but it gathered all its courage and with a loud "Take this!", threw the bamboo stalks at the dragon with full force.
 
 Without missing a beat, the dragon snatched the packet of stalks as if it were a baseball. "Wow, thanks a lot! Deep down I knew you're capable of sharing with others."
 

@@ -55,7 +55,10 @@ function Para(s)
   return s
 end
 
--- TODO LineBlock
+function LineBlock(ls)
+  -- TODO hacky - find a "right" way to wrap \noindent
+  return "\\noindent{}" .. table.concat(ls, "\\pandocLineBreak{}")
+end
 
 -- counter for filenames
 local codeBlocks = 1
