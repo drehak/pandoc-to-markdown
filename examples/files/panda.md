@@ -26,6 +26,8 @@ One day the panda woke up and found an enormous red dragon at its doorstep. The 
 
 ---
 
+> Mencius said, "When a minister lives among calumniators, flatterers, and sycophants, though he may wish the State to be well governed, is it possible for it to be so?" (Mn. 6B.13)
+
 Passing a ^crane\ drone^ above and a ~dugong\ submarine~ under a river bridge, the panda eventually reached the store. Fumbling in its pockets, it took out a piece of paper and went after:
 
 - bamboo stalks

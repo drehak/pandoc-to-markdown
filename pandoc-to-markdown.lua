@@ -72,7 +72,7 @@ end
 -- TODO RawBlock
 
 function BlockQuote(s)
-  return s  -- TODO
+  return "\\pandocBlockQuoteBegin\n" .. s .. "\n\\pandocBlockQuoteEnd"
 end
 
 function OrderedList(items)

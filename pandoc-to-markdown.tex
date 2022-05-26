@@ -16,6 +16,8 @@
 %%% Most block elements are broken into two "Begin" and "End" parts to avoid
 %%% running out of memory during macro expansion, since their contents can be
 %%% very large, especially in the case of Divs.
+\def\pandocBlockQuoteBegin{\markdownRendererBlockQuoteBegin}%
+\def\pandocBlockQuoteEnd{\markdownRendererBlockQuoteEnd}%
 \def\pandocOrderedListBegin{\markdownRendererOlBegin}%
 \def\pandocOrderedListItemBegin{\markdownRendererOlItem}%
 \def\pandocOrderedListItemEnd{\markdownRendererOlItemEnd}%
