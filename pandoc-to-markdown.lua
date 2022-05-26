@@ -75,9 +75,15 @@ function BlockQuote(s)
   return s  -- TODO
 end
 
--- TODO OrderedList
+function OrderedList(items)
+  local buffer = {}
+  for _, item in pairs(items) do
+    table.insert(buffer, "\\pandocOrderedListItemBegin\n" .. item .. "\n\\pandocOrderedListItemEnd")
+  end
+  return "\\pandocOrderedListBegin\n" .. table.concat(buffer, '\n') .. "\n\\pandocOrderedListEnd"
+end
 
-function BulletList(items)
+function BulletList(items, num, sty, delim) -- TODO handle num, sty, delim
   local buffer = {}
   for _, item in pairs(items) do
     table.insert(buffer, "\\pandocBulletListItemBegin\n" .. item .. "\n\\pandocBulletListItemEnd")

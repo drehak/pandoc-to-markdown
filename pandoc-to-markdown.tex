@@ -16,6 +16,10 @@
 %%% Most block elements are broken into two "Begin" and "End" parts to avoid
 %%% running out of memory during macro expansion, since their contents can be
 %%% very large, especially in the case of Divs.
+\def\pandocOrderedListBegin{\markdownRendererOlBegin}%
+\def\pandocOrderedListItemBegin{\markdownRendererOlItem}%
+\def\pandocOrderedListItemEnd{\markdownRendererOlItemEnd}%
+\def\pandocOrderedListEnd{\markdownRendererOlEnd}%
 \def\pandocBulletListBegin{\markdownRendererUlBegin}%
 \def\pandocBulletListItemBegin{\markdownRendererUlItem}%
 \def\pandocBulletListItemEnd{\markdownRendererUlItemEnd}%
