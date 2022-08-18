@@ -14,7 +14,7 @@
 
 - `browsers.html` - *Every Web Browser Absolutely Sucks.* by Luke Smith. I have stripped elements for navigation and tags, resulting in a nice version for "print".
     - [raw file][browsers.html-raw], [TeX input][browsers.html-input], [TeX output][browsers.html-output], [PDF output][browsers.html-pdf], [source][browsers.html-source]
-- `gdp.html` - (incomplete) *Why It's Bad to Have High GDP* by Luke Smith. Similar to `browsers.html`, but contains an image. Not stripped.
+- `gdp.html` - *Why It's Bad to Have High GDP* by Luke Smith. Similar to `browsers.html`, but contains an image. Not stripped.
     - [raw file][gdp.html-raw], [TeX input][gdp.html-input], [TeX output][gdp.html-output], [PDF output][gdp.html-pdf], [source][gdp.html-source]
 - `pandoc.html` - (incomplete) Hackage documentation of Pandoc's AST elements. Lots of divs and tables.
     - [raw file][pandoc.html-raw], [TeX input][pandoc.html-input], [TeX output][pandoc.html-output], [PDF output][pandoc.html-pdf], [source][pandoc.html-source]

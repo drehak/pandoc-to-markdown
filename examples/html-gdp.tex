@@ -1,6 +1,9 @@
 \documentclass{article}
+% enable support from downloading and typesetting images in HTML
 \usepackage[theme=witiko/graphicx/http]{markdown}
 \usepackage{pandoc-to-markdown}
+% prevent images from overflowing over the page
+\setkeys{Gin}{width=\linewidth}
 
 \begin{document}
 \pandocInput[format=html]{files/gdp.html}
