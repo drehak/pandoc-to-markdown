@@ -18,17 +18,17 @@ setmetatable(_G, meta)
 local function escape(s)
   s = string.gsub(s, "[\\{}%|_#&~%^%%%$]", function(c)
     local s
-    if     c == "&"  then s = "\\pandocRendererAmpersand{}"
-    elseif c == "\\" then s = "\\pandocRendererBackslash{}"
-    elseif c == "^"  then s = "\\pandocRendererCircumflex{}"
-    elseif c == "$"  then s = "\\pandocRendererDollarSign{}"
-    elseif c == "#"  then s = "\\pandocRendererHash{}"
-    elseif c == "{"  then s = "\\pandocRendererLeftBrace{}"
-    elseif c == "%"  then s = "\\pandocRendererPercentSign{}"
-    elseif c == "|"  then s = "\\pandocRendererPipe{}"
-    elseif c == "}"  then s = "\\pandocRendererRightBrace{}"
-    elseif c == "~"  then s = "\\pandocRendererTilde{}"
-    elseif c == "_"  then s = "\\pandocRendererUnderscore{}"
+    if     c == "&"  then s = "\\pandocAmpersand{}"
+    elseif c == "\\" then s = "\\pandocBackslash{}"
+    elseif c == "^"  then s = "\\pandocCircumflex{}"
+    elseif c == "$"  then s = "\\pandocDollarSign{}"
+    elseif c == "#"  then s = "\\pandocHash{}"
+    elseif c == "{"  then s = "\\pandocLeftBrace{}"
+    elseif c == "%"  then s = "\\pandocPercentSign{}"
+    elseif c == "|"  then s = "\\pandocPipe{}"
+    elseif c == "}"  then s = "\\pandocRightBrace{}"
+    elseif c == "~"  then s = "\\pandocTilde{}"
+    elseif c == "_"  then s = "\\pandocUnderscore{}"
     else                  s = c
     end
     return s
