@@ -116,7 +116,31 @@ function HorizontalRule()
   return "\\pandocHorizontalRule"
 end
 
--- TODO Table
+function Table(caption, aligns, widths, headers, rows)
+  local coldef = ""
+  for col,def in pairs(aligns) do
+    if     def == "AlignLeft"    then coldef = coldef .. "l"
+    elseif def == "AlignRight"   then coldef = coldef .. "r"
+    elseif def == "AlignDefault" then coldef = coldef .. "c"
+    elseif def == "AlignCenter"  then coldef = coldef .. "d"
+    end
+  end
+
+  local buffer = {"\\pandocTable{"}
+  if caption ~= nil then table.insert(buffer, caption) end
+  table.insert(buffer, "}{" .. #rows .. "}{" .. #aligns .. "}{" .. coldef .. "}")
+
+  for i,row in ipairs(rows) do
+    local row_buffer = {"{"}
+    for j,cell in ipairs(row) do
+      table.insert(row_buffer, "{" .. cell .. "}")
+    end
+    table.insert(row_buffer, "}")
+    table.insert(buffer, table.concat(row_buffer))
+  end
+
+  return table.concat(buffer)
+end
 
 function Div(s, attr)  -- attributes are discarded for now
   return "\\pandocDivBegin\n" .. s .. "\n\\pandocDivEnd{}"
@@ -183,7 +207,6 @@ end
 function LineBreak()
   return "\\pandocLineBreak{}"
 end
-
 
 function InlineMath(s)
   return "\\pandocInlineMath{" .. s .. "}"
