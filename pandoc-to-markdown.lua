@@ -87,6 +87,10 @@ function OrderedList(items)
 end
 
 function BulletList(items, num, sty, delim) -- TODO handle num, sty, delim
+  if #items == 0 then
+    return ""
+  end
+
   local buffer = {}
   for _, item in pairs(items) do
     table.insert(buffer, "\\pandocBulletListItemBegin\n" .. item .. "\n\\pandocBulletListItemEnd")
