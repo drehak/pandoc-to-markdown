@@ -19,13 +19,13 @@
 - `pandoc.html` - (incomplete) Hackage documentation of Pandoc's AST elements. Lots of divs and tables.
     - [raw file][pandoc.html-raw], [TeX input][pandoc.html-input], [TeX output][pandoc.html-output], [PDF output][pandoc.html-pdf], [source][pandoc.html-source]
 
- [browsers.html-source]: https://lukesmith.xyz/articles/every-web-browser-absolutely-sucks
+ [browsers.html-source]: https://lukesmith.xyz/articles/every-web-browser-absolutely-sucks/
  [browsers.html-raw]: files/browsers.html?plain=1
  [browsers.html-input]: html-browsers.tex
  [browsers.html-output]: https://github.com/drehak/pandoc-to-markdown/releases/download/latest/html-browsers.pandoc.tex
  [browsers.html-pdf]: https://github.com/drehak/pandoc-to-markdown/releases/download/latest/html-browsers.pdf
 
- [gdp.html-source]: https://lukesmith.xyz/articles/why-its-bad-to-have-high-gdp
+ [gdp.html-source]: https://lukesmith.xyz/articles/why-its-bad-to-have-high-gdp/
  [gdp.html-raw]: files/gdp.html?plain=1
  [gdp.html-input]: html-gdp.tex
  [gdp.html-output]: https://github.com/drehak/pandoc-to-markdown/releases/download/latest/html-gdp.pandoc.tex
