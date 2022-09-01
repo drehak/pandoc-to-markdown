@@ -16,10 +16,14 @@ clean:
 	@rm -frv _pandoc_*
 	@rm -frv _minted-*
 	@rm -fv *.aux
+	@rm -fv *.bbl
+	@rm -fv *.bcf
+	@rm -fv *.blg
 	@rm -fv *.fdb_latexmk
 	@rm -fv *.fls
 	@rm -fv *.log
 	@rm -fv *.pandoc.tex
+	@rm -fv *.run.xml
 	@echo
 
 clean-all: clean

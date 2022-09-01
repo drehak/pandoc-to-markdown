@@ -20,9 +20,11 @@ One day the panda woke up and found an enormous red dragon at its doorstep. The 
 
 "Ah, pardon me, my friend. I thought you were a Marxist, but everyone knows Marxists cannot strike out text."
 
-"Indeed, but I am a **ginseng-flavored** Marxist!"
+"Indeed, but I am a **ginseng-flavored** Marxist!"[^gfm]
 
 "Oh Heavens!" cried out the panda, slipped [under]{.underline} the dragon and ran out to the store, as it was out of converting tools today.
+
+[^gfm]: This was a pun on Github-flavored Markdown, which this document was in. Pandoc-flavored Markdown works better for this demonstration, so I later switched to that. Since then, I don't know how to make the pun work.
 
 ---
 
@@ -89,3 +91,5 @@ $$
 "That's not how the math works. The sums in the numerator would increase as well."
 
 "Oh... but I like my house."
+
+"Sorry, pal. From each according to his ability, to each according to his needs [see @becker1844; @blanc1851; later also @marx1875], as we say."

@@ -4,8 +4,12 @@ _minted-*/
 
 # files
 *.aux
+*.bbl
+*.bcf
+*.blg
 *.fdb_latexmk
 *.fls
 *.log
 *.pandoc.tex
 *.pdf
+*.run.xml

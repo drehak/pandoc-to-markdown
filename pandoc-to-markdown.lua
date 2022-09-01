@@ -194,7 +194,20 @@ function DoubleQuoted(s)
   return "\\pandocDoubleQuoted{" .. s .. "}"
 end
 
--- TODO Cite
+function Cite(s, cs)
+  local buffer = {"\\pandocCite{" .. #cs .. "}"}
+  for _, citation in pairs(cs) do
+    if (citation.citationMode == "SuppressAuthor") then
+      table.insert(buffer, "{-}")
+    else
+      table.insert(buffer, "{+}")
+    end
+    table.insert(buffer, "{" .. citation.citationPrefix .. "}")
+    table.insert(buffer, "{" .. citation.citationSuffix .. "}")
+    table.insert(buffer, "{" .. citation.citationId .. "}")
+  end
+  return table.concat(buffer)
+end
 
 function Code(s, attr)  -- attributes are discarded - no support in Markdown
   return "\\pandocCode{" .. escape(s) .. "}"
