@@ -90,6 +90,14 @@ $$
 
 "That's not how the math works. The sums in the numerator would increase as well."
 
-"Oh... but I like my house."
+"Oh... but I \emph{like} my house."[^raw]
 
 "Sorry, pal. From each according to his ability, to each according to his needs [see @becker1844; @blanc1851; later also @marx1875], as we say."
+
+\emph{(There's citations, so it has to be true!)}[^raw]
+
+[^raw]: Raw TeX/LaTeX can also be included in the document. See extension `raw_tex` in the Pandoc documentation/manual. `<i>Other types of raw blocks, like this HTML, will be ignored. This seems to be the standard praxis in Pandoc writers, when the raw block format and output format are incompatible.</i>`{=html}
+
+```{=html}
+<i>Raw blocks of formats other than TeX/LaTeX will also be ignored.</i>
+```

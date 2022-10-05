@@ -72,7 +72,9 @@ function CodeBlock(s, attr)  -- attributes are discarded - no support in Markdow
   return "\\pandocCodeBlock{" .. filename .. "}{" .. attr.class .. "}"
 end
 
--- TODO RawBlock
+function RawBlock(format, str)
+  return "\\pandocRawBlock{" .. format .. "}{" .. str .. "}"
+end
 
 function BlockQuote(s)
   return "\\pandocBlockQuoteBegin\n" .. s .. "\n\\pandocBlockQuoteEnd"
@@ -149,8 +151,6 @@ end
 function Div(s, attr)  -- attributes are discarded for now
   return "\\pandocDivBegin\n" .. s .. "\n\\pandocDivEnd{}"
 end
-
--- TODO Null
 
 -- Inline elements.
 
@@ -233,7 +233,9 @@ function DisplayMath(s)
   return "\\pandocDisplayMath{" .. s .. "}"
 end
 
--- TODO RawInline
+function RawInline(format, str)
+  return "\\pandocRawInline{" .. format .. "}{" .. str .. "}"
+end
 
 function Link(s, tgt, tit, attr)   -- attributes are discarded for now
   return "\\pandocLink{" .. s .. "}{" .. escape(tgt) .. "}{" .. tgt .. "}{" .. escape(tit) .. "}"

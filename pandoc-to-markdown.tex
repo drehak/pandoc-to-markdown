@@ -12,6 +12,13 @@
       { \markdownRendererInputVerbatim { #1 } }
       { \markdownRendererInputFencedCode { #1 } { #2 } }
   }
+\def\pandocRawBlock#1#2
+  {
+    \tl_if_eq:nnT
+      { #1 }
+      { tex }
+      { #2 }
+  }
 \ExplSyntaxOff
 %%% Most block elements are broken into two "Begin" and "End" parts to avoid
 %%% running out of memory during macro expansion, since their contents can be
@@ -69,6 +76,15 @@
 \def\pandocSoftBreak{ }%
 \def\pandocLineBreak{\hfil\break}%
 \def\pandocInlineMath#1{$#1$}%
+\ExplSyntaxOn
+\def\pandocRawInline#1#2
+  {
+    \tl_if_eq:nnT
+      { #1 }
+      { tex }
+      { #2 }
+  }
+\ExplSyntaxOff
 \def\pandocLink#1#2#3#4{\markdownRendererLink{#1}{#2}{#3}{#4}}
 \def\pandocImage#1#2#3#4{\markdownRendererImage{#1}{#2}{#3}{#4}}
 \def\pandocCaptionedImage#1#2#3#4{\markdownRendererImage{#1}{#2}{#3}{#4}}
