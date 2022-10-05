@@ -16,8 +16,8 @@
     - [raw file][browsers.html-raw], [TeX input][browsers.html-input], [TeX output][browsers.html-output], [PDF output][browsers.html-pdf], [source][browsers.html-source]
 - `gdp.html` - *Why It's Bad to Have High GDP* by Luke Smith. Similar to `browsers.html`, but contains an image. Not stripped.
     - [raw file][gdp.html-raw], [TeX input][gdp.html-input], [TeX output][gdp.html-output], [PDF output][gdp.html-pdf], [source][gdp.html-source]
-- `pandoc.html` - (incomplete) Hackage documentation of Pandoc's AST elements. Lots of divs and tables.
-    - [raw file][pandoc.html-raw], [TeX input][pandoc.html-input], [TeX output][pandoc.html-output], [PDF output][pandoc.html-pdf], [source][pandoc.html-source]
+- ~~`pandoc.html` - (incomplete) Hackage documentation of Pandoc's AST elements. Lots of divs and tables. More of a stress test than a document you would actually like to typeset.~~ Currently disabled in Makefile and automation.
+    - ~~[raw file][pandoc.html-raw], [TeX input][pandoc.html-input], [source][pandoc.html-source]~~
 
  [browsers.html-source]: https://lukesmith.xyz/articles/every-web-browser-absolutely-sucks/
  [browsers.html-raw]: files/browsers.html?plain=1
@@ -34,8 +34,6 @@
  [pandoc.html-source]: https://hackage.haskell.org/package/pandoc-types-1.22/docs/Text-Pandoc-Definition.html
  [pandoc.html-raw]: files/pandoc.html?plain=1
  [pandoc.html-input]: html-pandoc.tex
- [pandoc.html-output]: https://github.com/drehak/pandoc-to-markdown/releases/download/latest/html-pandoc.pandoc.tex
- [pandoc.html-pdf]: https://github.com/drehak/pandoc-to-markdown/releases/download/latest/html-pandoc.pdf
 
 ### Manual pages
 

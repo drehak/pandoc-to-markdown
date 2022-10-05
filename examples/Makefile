@@ -3,7 +3,7 @@ examples:
 	@echo
 	@latexmk -shell-escape -lualatex html-browsers.tex
 	@latexmk -shell-escape -lualatex html-gdp.tex
-	@latexmk -shell-escape -lualatex html-pandoc.tex
+	# @latexmk -shell-escape -lualatex html-pandoc.tex
 	@latexmk -shell-escape -lualatex markdown-panda.tex
 	@latexmk -shell-escape -lualatex man-pandoc.tex
 	@latexmk -shell-escape -lualatex man-leapp.tex
