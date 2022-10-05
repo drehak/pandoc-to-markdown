@@ -63,14 +63,9 @@ end
 
 Eventually the panda grabbed all the weap- uh, snacks it wanted and headed back home.
 
-| The
-| dragon
-| was
-| still
-| standing
-| at
-| its
-| doorstep.
+| \noindent{}But the dragon was
+| standing at its doorstep still,
+| imposing and red.[^raw]
 
 The panda felt very [small]{.smallcaps} in comparison, but it gathered all its courage and with a loud "Take this!", threw the bamboo stalks at the dragon with full force.
 
@@ -78,9 +73,7 @@ Without missing a beat, the dragon snatched the packet of stalks as if it were a
 
 The panda was stupefied. "Weren't you going to, uh, eat me?"
 
-"What? You? Nah, I'm vegan. Anyway, we're nationalizing your house. It's too big and you're driving up our country's Gini coefficient[^gini]."
-
-[^gini]: The Gini coefficient measures the inequality among values of a frequency distribution, like levels of income. A Gini coefficient of 0 expresses perfect equality, where all values are the same (i.e. where everyone has the same income). A Gini coefficient of 1 (or 100%) expresses maximal inequality among values (i.e. for a large number of people where only one person has all the income or consumption and all others have none, the Gini coefficient will be nearly one).
+"What? You? Nah, I'm vegan. Anyway, we're nationalizing your house. It's too big and you're driving up our country's Gini coefficient."
 
 $$
 G = \frac{\displaystyle{\sum_{i=1}^n \sum_{j=1}^n \left| x_i - x_j \right|}}{\displaystyle{2 \sum_{i=1}^n \sum_{j=1}^n x_j}} = \frac{\displaystyle{\sum_{i=1}^n \sum_{j=1}^n \left| x_i - x_j \right|}}{\displaystyle{2n\sum_{j=1}^n x_j}} = \frac{\displaystyle{\sum_{i=1}^n \sum_{j=1}^n \left| x_i - x_j \right|}}{\displaystyle{2 n^2 \bar{x}}}
@@ -90,7 +83,7 @@ $$
 
 "That's not how the math works. The sums in the numerator would increase as well."
 
-"Oh... but I \emph{like} my house."[^raw]
+"Oh... but I like my house."
 
 "Sorry, pal. From each according to his ability, to each according to his needs [see @becker1844; @blanc1851; later also @marx1875], as we say."
 
