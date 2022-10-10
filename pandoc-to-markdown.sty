@@ -7,6 +7,19 @@
 % Key-value definitions
 \RequirePackage{keyval}
 
+%% Block elements
+\ExplSyntaxOn
+\renewcommand\pandocRawBlock[2]
+  {
+    \str_case:nn
+      { #1 }
+      {
+        { tex }   { #2 }
+        { latex } { #2 }
+      }
+  }
+\ExplSyntaxOff
+
 %% Inline elements
 \RequirePackage[normalem]{ulem}
 \renewcommand\pandocUnderline{\uline}
@@ -15,6 +28,17 @@
 \renewcommand\pandocSuperscript{\textsuperscript}
 \renewcommand\pandocSmallCaps{\textsc}
 \renewcommand\pandocLineBreak{\\}
+\ExplSyntaxOn
+\renewcommand\pandocRawInline[2]
+  {
+    \str_case:nn
+      { #1 }
+      {
+        { tex }   { #2 }
+        { latex } { #2 }
+      }
+  }
+\ExplSyntaxOff
 \renewcommand\pandocNote{\footnote}
 
 \def\pandocFormat{markdown}

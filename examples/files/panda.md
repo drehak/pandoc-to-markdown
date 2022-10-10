@@ -63,7 +63,7 @@ end
 
 Eventually the panda grabbed all the weap- uh, snacks it wanted and headed back home.
 
-| \noindent{}But the dragon was
+| `\noindent{}`{=latex}But the dragon was
 | standing at its doorstep still,
 | imposing and red.[^raw]
 
@@ -89,7 +89,7 @@ $$
 
 \emph{(There's citations, so it has to be true!)}[^raw]
 
-[^raw]: Raw TeX/LaTeX can also be included in the document. See extension `raw_tex` in the Pandoc documentation/manual. `<i>Other types of raw blocks, like this HTML, will be ignored. This seems to be the standard praxis in Pandoc writers, when the raw block format and output format are incompatible.</i>`{=html}
+[^raw]: Raw TeX/LaTeX can also be included in the document. See extension `raw_tex` in the Pandoc documentation/manual. `<i>Types of raw blocks other than `tex` or `latex`, like this HTML, will be ignored. This seems to be the standard praxis in Pandoc writers, when the raw block format and output format are incompatible.</i>`{=html}
 
 ```{=html}
 <i>Raw blocks of formats other than TeX/LaTeX will also be ignored.</i>
