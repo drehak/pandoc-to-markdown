@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{pandoc-to-markdown}[2021/01/18 package pandoc-to-markdown]
+\ProvidesPackage{pandoc-to-markdown}[2022/10/11 package pandoc-to-markdown]
 
 \RequirePackage{markdown}
 \input"pandoc-to-markdown.tex"
@@ -50,6 +50,7 @@
 \def\pandocAuxDir{_pandoc_\jobname}
 
 % Document command definitions
+\RequirePackage{shellesc}  % Polyfill \write18 in LuaTeX
 \newcommand\pandocInput[2][]{%
   \setkeys{pandoc-to-markdown}{#1}%
   \directlua{local kpse = require("kpse")
