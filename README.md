@@ -2,18 +2,20 @@
 
 This repository contains a proof of concept for an upcoming package for TeX
 that will enable the use of [Pandoc][1] together with the [Markdown package][2]
-for TeX. For more information, see [the article in the CSTUG Bulletin 31:1–4][3]
-(in Slovak, [here is a machine translation to English][4]).
+for TeX. For more information, see [an article in the CSTUG Bulletin 31:1–4][3]
+(in Slovak, [here is a machine translation to English][4]) and [an article
+in TUGboat 43:1][5] (see Section 2.3).
 
  [1]: https://github.com/jgm/pandoc
  [2]: https://github.com/witiko/markdown
  [3]: https://www.cstug.cz/bulletin/pdf/2021-1-4.pdf#page=85
  [4]: https://translate.google.com/translate?sl=auto&tl=en&u=https://www.fi.muni.cz/~xnovot32/bulletin/2021-1-4/06-rehak-pandoc/&client=webapp
+ [5]: https://www.tug.org/TUGboat/tb43-1/tb133novotny-markdown.pdf#page=3
 
-*__Important:__ Pandoc currently supports two styles of [custom writers][5]. The new style was introduced only in 2.17.2. The classic style, which this project uses, is currently [deprecated][6] and should be removed in version 3.0.0. Therefore, this project (in its current state) will not eventually work with newest versions of Pandoc.*
+*__Important:__ Pandoc currently supports two styles of [custom writers][6]. The new style was introduced only in 2.17.2. The classic style, which this project uses, is currently [deprecated][7] and should be removed in version 3.0.0. Therefore, this project (in its current state) will not eventually work with newest versions of Pandoc.*
 
- [5]: https://pandoc.org/custom-writers.html
- [6]: https://github.com/jgm/pandoc/commit/921d7dd2711828d188fe4af2ba6d2765571cde2d
+ [6]: https://pandoc.org/custom-writers.html
+ [7]: https://github.com/jgm/pandoc/commit/921d7dd2711828d188fe4af2ba6d2765571cde2d
 
 To typeset the example documents, execute the following commands on a system with
 an up-to-date installation of TeX Live and Pandoc:
@@ -21,13 +23,13 @@ an up-to-date installation of TeX Live and Pandoc:
     $ cd examples
     $ make examples
 
-Alternatively, you can use [the witiko/markdown Docker image][7], which includes
+Alternatively, you can use [the witiko/markdown Docker image][8], which includes
 both TeX Live and Pandoc:
 
     $ docker run --rm -it -v "$PWD":/workdir -w /workdir witiko/markdown \
     > latexmk -shell-escape -pdf examples/example-man-pandoc.tex
 
- [7]: https://hub.docker.com/r/witiko/markdown/tags
+ [8]: https://hub.docker.com/r/witiko/markdown/tags
 
 See `examples/` for the example documents.
 
