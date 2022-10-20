@@ -217,7 +217,7 @@ function Space()
 end
 
 function SoftBreak()
-  return "\\pandocSoftBreak{}"
+  return "\n"
 end
 
 function LineBreak()
