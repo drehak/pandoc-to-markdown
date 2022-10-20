@@ -56,7 +56,7 @@ function Para(s)
 end
 
 function LineBlock(ls)
-  return table.concat(ls, "\\pandocLineBreak{}\\n")
+  return table.concat(ls, "\\pandocLineBreak\n")
 end
 
 -- counter for filenames
@@ -221,7 +221,7 @@ function SoftBreak()
 end
 
 function LineBreak()
-  return "\\pandocLineBreak{}\\n"
+  return "\\pandocLineBreak\n"
 end
 
 function InlineMath(s)
