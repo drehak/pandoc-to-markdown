@@ -213,7 +213,7 @@ function Code(s, attr)  -- attributes are discarded - no support in Markdown
 end
 
 function Space()
-  return "\\pandocSpace{}"
+  return " "
 end
 
 function SoftBreak()
