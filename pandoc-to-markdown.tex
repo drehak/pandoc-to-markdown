@@ -53,8 +53,13 @@
         { 6 } { \markdownRendererHeadingSix { #2 } }
       }
   }
+\def\pandocHorizontalRule
+  {
+    \cs_if_exist_use:NF
+      \markdownRendererThematicBreak
+      \markdownRendererHorizontalRule
+  }
 \ExplSyntaxOff
-\def\pandocHorizontalRule{\markdownRendererThematicBreak}%
 \def\pandocDivBegin{}%
 \def\pandocDivEnd{}%
 \def\pandocDisplayMath#1{\[#1\]}%
