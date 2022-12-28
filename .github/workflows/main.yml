@@ -9,7 +9,7 @@ jobs:
       run:
         working-directory: ./examples
     container:
-      image: witiko/markdown:TL2021-historic
+      image: witiko/markdown:2.17.1-23-gaab430c-TL2021-historic
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
