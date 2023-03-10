@@ -5,14 +5,18 @@
 
 %% Block elements
 \ExplSyntaxOn
-\def\pandocCodeBlock#1#2
+\cs_new:Npn
+  \pandocCodeBlock
+  #1 #2
   {
     \tl_if_empty:nTF
       { #2 }
       { \markdownRendererInputVerbatim { #1 } }
       { \markdownRendererInputFencedCode { #1 } { #2 } }
   }
-\def\pandocRawBlock#1#2
+\cs_new:Npn
+  \pandocRawBlock
+  #1 #2
   {
     \tl_if_eq:nnT
       { #1 }
@@ -40,7 +44,9 @@
 \def\pandocDefinitionListItemEnd{\markdownRendererDlItemEnd}%
 \def\pandocDefinitionListEnd{\markdownRendererDlEnd}%
 \ExplSyntaxOn
-\def\pandocHeader#1#2
+\cs_new:Npn
+  \pandocHeader
+  #1 #2
   {
     \int_case:nn
       { #1 }
@@ -53,8 +59,14 @@
         { 6 } { \markdownRendererHeadingSix { #2 } }
       }
   }
+\cs_new:Npn
+  \pandocHorizontalRule
+  {
+    \cs_if_exist_use:NF
+      \markdownRendererThematicBreak
+      \markdownRendererHorizontalRule
+  }
 \ExplSyntaxOff
-\def\pandocHorizontalRule{\markdownRendererHorizontalRule}%
 \def\pandocDivBegin{}%
 \def\pandocDivEnd{}%
 \def\pandocDisplayMath#1{\[#1\]}%
@@ -75,7 +87,9 @@
 \def\pandocLineBreak{\markdownRendererLineBreak}%
 \def\pandocInlineMath#1{$#1$}%
 \ExplSyntaxOn
-\def\pandocRawInline#1#2
+\cs_new:Npn
+  \pandocRawInline
+  #1 #2
   {
     \tl_if_eq:nnT
       { #1 }
